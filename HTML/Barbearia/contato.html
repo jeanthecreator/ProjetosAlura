@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Barbearia Alura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body id="main-body">
+
+    <header class="cabecalho">
+        <div class="caixa">
+            <h1> 
+                <img src="/imagens/logo.png" alt="Logo Alura"> 
+            </h1>
+
+            <nav class="ajuste-navegacao">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-contrato">
+        <form class="form-geral">
+            
+                <div class="form-info">
+
+                    <label for="nomecompleto">
+                        Nome Completo
+                        <input type="text" id="nomecompleto" required>
+                    </label>
+                    
+
+                    <label for="email">
+                        Email
+                        <input type="email" id="email" required placeholder="email@dominio.com">
+                    </label>
+                    
+
+                    <label for="telefone">
+                        Telefone
+                        <input type="tel" id="telefone" required placeholder="(xx) xxxxx-xxxx">
+                    </label>
+                    
+                    <label for="form-texto">Mensagem</label>
+                    <textarea name="mensagem" id="form-texto" class="form-texto-class"></textarea>
+
+                </div>
+
+                <div class="form-radio">
+                    <p class="form-geral">Como prefere o nosso contato?</p>   
+
+                    <label for="telefone-radio">
+                        <input type="radio" value="telefone" name="radio-unico" id="telefone-radio">
+                        Telefone
+                    </label>
+
+                    <label for="email-radio">
+                        <input type="radio" value="email" name="radio-unico" id="email-radio">
+                        E-mail
+                    </label>
+
+                    <label for="whatsapp-radio">
+                        <input type="radio" value="whatsapp" name="radio-unico" id="whatsapp-radio" checked>
+                        Whatsapp
+                    </label>
+
+                </div>
+
+                <div class="form-select">
+                    <p class="form-geral">Qual horario prefere ser atendido?</p>
+
+                    <select>
+                        <option>Manha</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+
+                </div>
+
+                <label class="form-checkbox" for="receber-email">
+                    <input type="checkbox" value="receberemail" id="receber-email" checked>
+                    Gostaria de receber nossas novidades por e-mail?
+                </label>
+                
+                <input type="submit" value="Enviar Formulario" class="form-botao">
+
+                <table id="form-tabela">
+
+                    <thead>
+                            <th>Dia</th>
+                            <th>Horario</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Segunda-Sexta</td>
+                            <td>8h ~ 21h</td>
+                        </tr>
+                        <tr>
+                            <td>Sabado</td>
+                            <td>8h ~ 19h</td>
+                        </tr>
+                        <tr>
+                            <td>Domingo</td>
+                            <td>8h ~ 16h</td>
+                        </tr>
+                        <tr>
+                            <td>Feriados</td>
+                            <td>8h ~ 13h</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+        </form>
+    </main>
+
+    <footer>
+        
+        <img src="imagens/logo-branco.png" alt="Logo rodape">
+        <p class="copyright">&copy; Copyright Barbearia Alura - 2023</p> 
+        
+    </footer>
+    
+</body>
+</html>
