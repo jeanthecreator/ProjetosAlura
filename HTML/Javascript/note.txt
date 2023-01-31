@@ -34,3 +34,9 @@ data-conteudo = 'cadastrar'
     }))
 
 })()
+
+https://devhints.io/git-log-format
+
+https://www.alura.com.br/artigos/como-trabalhar-com-markdown
+
+https://www.w3schools.com/js/js_htmldom_elements.asp
