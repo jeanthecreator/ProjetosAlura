@@ -1,5 +1,5 @@
-from jogoteca import app, nome_css_file, db
-from flask import render_template, session, url_for, redirect, request, flash
+from jogoteca import app, nome_css_file, db, nome_css_file_app
+from flask import render_template, session, url_for, redirect, request, flash, send_from_directory
 from models import Jogos, Usuarios
 
 @app.route('/')
@@ -35,6 +35,10 @@ def adiciona_novo():
     novo_jogo = Jogos(nome=nome, categoria=categoria, plataforma=plataforma)
     db.session.add(novo_jogo)
     db.session.commit()
+
+    arquivo = request.files['arquivo']
+    upload_path = app.config['UPLOAD_PATH']
+    arquivo.save(f'{upload_path}/capa{novo_jogo.id}.jpg')
 
     return redirect (url_for('catalogo_jogos'))
 
@@ -108,4 +112,9 @@ def logout():
     session['usuario_logado'] = None
     flash("Logout efetuado!")
     return redirect(url_for('catalogo_jogos'))
+
+@app.route('/upload/<nome_arquivo>')
+
+def imagem_capa(nome_arquivo):
+    return send_from_directory('upload', nome_arquivo)
 

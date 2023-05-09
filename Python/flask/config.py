@@ -1,4 +1,5 @@
 from jogoteca import app
+import os
 
 SECRET_KEY = 'trovador'
 SQLALCHEMY_DATABASE_URI = \
@@ -9,3 +10,5 @@ SQLALCHEMY_DATABASE_URI = \
         local_port = 'localhost',
         database = 'jogoteca'
 )
+
+UPLOAD_PATH = os.path.dirname(os.path.abspath(__file__)) + '/upload'
